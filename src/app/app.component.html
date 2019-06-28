@@ -1,0 +1,29 @@
+<nz-layout class="main">
+  <nz-header>
+    <div class="logo"></div>
+    <ul class="nav" nz-menu [nzTheme]="'dark'" [nzMode]="'horizontal'">
+      <li nz-menu-item
+          [nzSelected]="nav==='/'"
+          routerLink="/">
+        仪表盘
+      </li>
+      <li nz-menu-item
+          [nzSelected]="nav==='/journal'"
+          routerLink="/journal">
+        日志
+      </li>
+      <li nz-menu-item
+          [nzSelected]="nav==='/job'"
+          routerLink="/job">
+        任务
+      </li>
+    </ul>
+  </nz-header>
+  <nz-layout>
+    <nz-layout class="container">
+      <nz-content class="content">
+        <router-outlet></router-outlet>
+      </nz-content>
+    </nz-layout>
+  </nz-layout>
+</nz-layout>
