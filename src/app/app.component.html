@@ -13,17 +13,15 @@
         日志
       </li>
       <li nz-menu-item
-          [nzSelected]="nav==='/job'"
-          routerLink="/job">
+          [nzSelected]="nav==='/schedule'"
+          routerLink="/schedule">
         任务
       </li>
     </ul>
   </nz-header>
-  <nz-layout>
-    <nz-layout class="container">
-      <nz-content class="content">
-        <router-outlet></router-outlet>
-      </nz-content>
-    </nz-layout>
+  <nz-layout class="container">
+    <nz-content>
+      <router-outlet></router-outlet>
+    </nz-content>
   </nz-layout>
 </nz-layout>
