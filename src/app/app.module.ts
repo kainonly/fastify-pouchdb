@@ -14,15 +14,21 @@ import {AppComponent} from './app.component';
 import {HomeComponent} from './home/home.component';
 
 import {MainService} from './api/main.service';
+import {JournalComponent} from './journal/journal.component';
+import {ScheduleComponent} from './schedule/schedule.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
+  {path: 'journal', component: JournalComponent},
+  {path: 'schedule', component: ScheduleComponent}
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    JournalComponent,
+    ScheduleComponent,
   ],
   imports: [
     BrowserModule,
