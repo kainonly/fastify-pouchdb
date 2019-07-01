@@ -6,7 +6,7 @@ import {FormsModule} from '@angular/forms';
 import {registerLocaleData} from '@angular/common';
 import {HttpClientModule} from '@angular/common/http';
 import zh from '@angular/common/locales/zh';
-import {NgZorroAntdModule, NZ_I18N, zh_CN} from 'ng-zorro-antd';
+import {NgZorroAntdModule, NZ_I18N, zh_CN, en_US} from 'ng-zorro-antd';
 
 registerLocaleData(zh);
 
@@ -16,6 +16,7 @@ import {HomeComponent} from './home/home.component';
 import {MainService} from './api/main.service';
 import {JournalComponent} from './journal/journal.component';
 import {ScheduleComponent} from './schedule/schedule.component';
+import en from '@angular/common/locales/en';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
