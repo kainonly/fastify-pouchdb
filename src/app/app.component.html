@@ -5,23 +5,57 @@
       <li nz-menu-item
           [nzSelected]="nav==='/'"
           routerLink="/">
-        仪表盘
-      </li>
-      <li nz-menu-item
-          [nzSelected]="nav==='/schedule'"
-          routerLink="/schedule">
-        计划任务
-      </li>
-      <li nz-menu-item
-          [nzSelected]="nav==='/journal'"
-          routerLink="/journal">
-        调度日志
+        <i nz-icon nzType="dashboard"></i> 仪表盘
       </li>
     </ul>
   </nz-header>
-  <nz-layout class="container">
-    <nz-content>
-      <router-outlet></router-outlet>
-    </nz-content>
+  <nz-layout>
+    <nz-sider nzWidth="200px" nzTheme="light">
+      <ul nz-menu nzMode="inline">
+        <li nz-submenu
+            nzIcon="schedule"
+            nzTitle="计划">
+          <ul>
+            <li nz-menu-item
+                routerLink="/once-task"
+                [nzSelected]="nav==='/once-task'">
+              单次任务
+            </li>
+            <li nz-menu-item
+                routerLink="/delay-task"
+                [nzSelected]="nav==='/delay-task'">
+              延时任务
+            </li>
+            <li nz-menu-item
+                routerLink="/timing-task"
+                [nzSelected]="nav==='/timing-task'">
+              定时任务
+            </li>
+          </ul>
+        </li>
+        <li nz-submenu
+            nzIcon="history"
+            nzTitle="调度">
+          <ul>
+            <li nz-menu-item
+                routerLink="/journal"
+                [nzSelected]="nav==='/journal'">
+              日志记录
+            </li>
+            <li nz-menu-item
+                routerLink="/journal-failed"
+                [nzSelected]="nav==='/journal-failed'">
+              故障记录
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nz-sider>
+
+    <nz-layout class="container">
+      <nz-content>
+        <router-outlet></router-outlet>
+      </nz-content>
+    </nz-layout>
   </nz-layout>
 </nz-layout>

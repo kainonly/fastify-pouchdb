@@ -1,0 +1,50 @@
+<nz-page-header nzTitle="故障记录">
+  <nz-breadcrumb nz-page-header-breadcrumb>
+    <nz-breadcrumb-item>
+      <a>仪表盘</a>
+    </nz-breadcrumb-item>
+    <nz-breadcrumb-item>调度</nz-breadcrumb-item>
+    <nz-breadcrumb-item>故障记录</nz-breadcrumb-item>
+  </nz-breadcrumb>
+
+  <nz-page-header-content>
+    <div nz-row nzGutter="8" class="control-panel">
+      <div nz-col [nzSm]="8">
+        <nz-input-group nzSearch [nzAddOnAfter]="nzAddOnAfter">
+          <input nz-input placeholder="请输入任务名称">
+        </nz-input-group>
+        <ng-template #nzAddOnAfter>
+          <button nz-button nzType="primary" nzSearch>
+            <i nz-icon type="search"></i>
+          </button>
+        </ng-template>
+      </div>
+      <div nz-col [nzSm]="14">
+        <button nz-button>
+          <i nz-icon type="sync"></i>
+        </button>
+      </div>
+    </div>
+
+    <nz-table #basicTable [nzData]="listOfData">
+      <thead>
+      <tr>
+        <th>任务名称</th>
+        <th>执行时间</th>
+        <th>执行结果</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let data of basicTable.data">
+        <td>{{ data.name }}</td>
+        <td>
+          <i nz-icon nzType="check-circle"></i>
+        </td>
+        <td>
+          <i nz-icon nzType="check-circle"></i>
+        </td>
+      </tr>
+      </tbody>
+    </nz-table>
+  </nz-page-header-content>
+</nz-page-header>
