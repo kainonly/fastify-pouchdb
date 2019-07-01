@@ -4,27 +4,7 @@ import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  template: '<router-outlet></router-outlet>',
 })
-export class AppComponent implements OnInit, OnDestroy {
-  nav: string;
-  private routerSubscription: Subscription;
-
-  constructor(
-    private router: Router,
-  ) {
-  }
-
-  ngOnInit(): void {
-    this.routerSubscription = this.router.events.subscribe(event => {
-      if (event instanceof NavigationEnd) {
-        this.nav = this.router.url;
-      }
-    });
-  }
-
-  ngOnDestroy(): void {
-    this.routerSubscription.unsubscribe();
-  }
+export class AppComponent {
 }
