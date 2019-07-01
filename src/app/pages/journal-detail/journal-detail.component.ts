@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {MainService} from '../../api/main.service';
 
 @Component({
   selector: 'app-journal-detail',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JournalDetailComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public main: MainService
+  ) {
+  }
 
   ngOnInit() {
   }
-
 }

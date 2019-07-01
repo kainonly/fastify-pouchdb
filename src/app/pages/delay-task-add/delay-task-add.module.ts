@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {DelayTaskAddComponent} from "./delay-task-add.component";
+import {DelayTaskAddComponent} from './delay-task-add.component';
 import {AppExtModule} from '../../app.ext.module';
 
 const routes: Routes = [

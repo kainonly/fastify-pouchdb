@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {FormBuilder, FormGroup} from '@angular/forms';
+import {MainService} from '../../api/main.service';
 
 @Component({
   selector: 'app-once-task-edit',
@@ -6,10 +8,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./once-task-edit.component.scss']
 })
 export class OnceTaskEditComponent implements OnInit {
+  form: FormGroup;
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(
+    public main: MainService,
+    private formBuilder: FormBuilder,
+  ) {
   }
 
+  ngOnInit() {
+    this.form = this.formBuilder.group({
+      name: []
+    });
+  }
+
+  submit() {
+
+  }
 }

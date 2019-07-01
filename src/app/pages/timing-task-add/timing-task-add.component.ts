@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup} from "@angular/forms";
-import {MainService} from "../../api/main.service";
+import {FormBuilder, FormGroup} from '@angular/forms';
+import {MainService} from '../../api/main.service';
 
 @Component({
   selector: 'app-timing-task-add',
@@ -25,5 +25,4 @@ export class TimingTaskAddComponent implements OnInit {
   submit() {
 
   }
-
 }

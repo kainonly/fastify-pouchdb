@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {MainService} from '../../api/main.service';
 
 @Component({
   selector: 'app-home',
@@ -6,11 +7,11 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() {
+  constructor(
+    public main: MainService
+  ) {
   }
 
   ngOnInit() {
   }
-
 }

@@ -1,6 +1,6 @@
 import {Directive, Input, OnInit} from '@angular/core';
-import {NzFormLabelComponent} from "ng-zorro-antd";
-import {ConfigService} from "../api/config.service";
+import {NzFormLabelComponent} from 'ng-zorro-antd';
+import {ConfigService} from '../api/config.service';
 
 @Directive({
   selector: '[formLabelCol]'
