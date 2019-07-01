@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {MainService} from '../../api/main.service';
 
 @Component({
   selector: 'app-journal-failed',
@@ -27,7 +28,9 @@ export class JournalFailedComponent implements OnInit {
     }
   ];
 
-  constructor() {
+  constructor(
+    public main: MainService
+  ) {
   }
 
   ngOnInit() {

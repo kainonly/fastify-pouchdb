@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {MainService} from '../../api/main.service';
 
 @Component({
   selector: 'app-timing-task',
@@ -27,7 +28,9 @@ export class TimingTaskComponent implements OnInit {
     }
   ];
 
-  constructor() {
+  constructor(
+    public main: MainService
+  ) {
   }
 
   ngOnInit() {

@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {TimingTaskEditComponent} from "./timing-task-edit.component";
+import {TimingTaskEditComponent} from './timing-task-edit.component';
 import {AppExtModule} from '../../app.ext.module';
 
 const routes: Routes = [

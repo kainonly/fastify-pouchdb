@@ -2,33 +2,30 @@
   <nz-header>
     <div class="logo"></div>
     <ul class="nav" nz-menu [nzTheme]="'dark'" [nzMode]="'horizontal'">
-      <li nz-menu-item
-          [nzSelected]="nav==='/'"
-          routerLink="/">
-        <i nz-icon nzType="dashboard"></i> 仪表盘
-      </li>
+
     </ul>
   </nz-header>
   <nz-layout>
     <nz-sider nzWidth="200px" nzTheme="light">
       <ul nz-menu nzMode="inline">
+        <li nz-menu-item
+            routerLink="/">
+          <i nz-icon nzType="dashboard"></i> 仪表盘
+        </li>
         <li nz-submenu
             nzIcon="schedule"
             nzTitle="计划">
           <ul>
             <li nz-menu-item
-                [open]="['once-task']"
-                [nzSelected]="nav==='/once-task'">
+                [open]="['once-task']">
               单次任务
             </li>
             <li nz-menu-item
-                [open]="['delay-task']"
-                [nzSelected]="nav==='/delay-task'">
+                [open]="['delay-task']">
               延时任务
             </li>
             <li nz-menu-item
-                [open]="['timing-task']"
-                [nzSelected]="nav==='/timing-task'">
+                [open]="['timing-task']">
               定时任务
             </li>
           </ul>
@@ -38,13 +35,11 @@
             nzTitle="调度">
           <ul>
             <li nz-menu-item
-                [open]="['journal']"
-                [nzSelected]="nav==='/journal'">
+                [open]="['journal']">
               日志记录
             </li>
             <li nz-menu-item
-                [open]="['journal-failed']"
-                [nzSelected]="nav==='/journal-failed'">
+                [open]="['journal-failed']">
               故障记录
             </li>
           </ul>

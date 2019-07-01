@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Subscription} from "rxjs";
-import {NavigationEnd, Router} from "@angular/router";
+import {MainService} from '../api/main.service';
 
 @Component({
   selector: 'app-dashboards',
@@ -8,23 +7,13 @@ import {NavigationEnd, Router} from "@angular/router";
   styleUrls: ['./dashboards.component.scss'],
 })
 export class DashboardsComponent implements OnInit {
-  nav: string;
-  private routerSubscription: Subscription;
 
   constructor(
-    private router: Router,
+    public main: MainService,
   ) {
   }
 
-  ngOnInit(): void {
-    this.routerSubscription = this.router.events.subscribe(event => {
-      if (event instanceof NavigationEnd) {
-        this.nav = this.router.url;
-      }
-    });
-  }
+  ngOnInit() {
 
-  ngOnDestroy(): void {
-    this.routerSubscription.unsubscribe();
   }
 }

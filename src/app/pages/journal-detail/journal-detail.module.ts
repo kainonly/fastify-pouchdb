@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {JournalDetailComponent} from "./journal-detail.component";
+import {JournalDetailComponent} from './journal-detail.component';
 import {AppExtModule} from '../../app.ext.module';
 
 const routes: Routes = [

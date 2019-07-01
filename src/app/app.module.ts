@@ -11,9 +11,9 @@ import {environment} from '../environments/environment';
 registerLocaleData(zh);
 
 import {AppComponent} from './app.component';
-import {TokenService} from "./guard/token.service";
+import {TokenService} from './guard/token.service';
 import {MainService} from './api/main.service';
-import {ConfigService} from "./api/config.service";
+import {ConfigService} from './api/config.service';
 
 const routes: Routes = [
   {path: '', loadChildren: './app.router.module#AppRouterModule', canActivate: [TokenService]},

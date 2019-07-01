@@ -1,11 +1,10 @@
 import {Injectable} from '@angular/core';
-import {Router} from "@angular/router";
+import {Router} from '@angular/router';
 import {Location} from '@angular/common';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient} from '@angular/common/http';
 
 @Injectable()
 export class MainService {
-
   constructor(
     private httpClient: HttpClient,
     private location: Location,

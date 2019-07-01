@@ -1,6 +1,6 @@
 import {Directive, Input, OnInit} from '@angular/core';
-import {ConfigService} from "../api/config.service";
-import {NzFormControlComponent} from "ng-zorro-antd";
+import {ConfigService} from '../api/config.service';
+import {NzFormControlComponent} from 'ng-zorro-antd';
 
 @Directive({
   selector: '[formControlCol]'

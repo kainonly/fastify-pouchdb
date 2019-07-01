@@ -1,5 +1,5 @@
 import {Directive, HostListener, Input} from '@angular/core';
-import {MainService} from "../api/main.service";
+import {MainService} from '../api/main.service';
 
 @Directive({
   selector: '[open]'

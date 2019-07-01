@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {OnceTaskComponent} from "./once-task.component";
+import {OnceTaskComponent} from './once-task.component';
 import {AppExtModule} from '../../app.ext.module';
 
 const routes: Routes = [
