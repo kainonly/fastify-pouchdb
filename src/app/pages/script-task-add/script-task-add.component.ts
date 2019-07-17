@@ -9,6 +9,7 @@ import {MainService} from '../../api/main.service';
 })
 export class ScriptTaskAddComponent implements OnInit {
   form: FormGroup;
+  cron: string[] = ['* * * * * *'];
 
   constructor(
     public main: MainService,
@@ -19,9 +20,12 @@ export class ScriptTaskAddComponent implements OnInit {
   ngOnInit() {
     this.form = this.formBuilder.group({
       job_name: [],
-      cron: [],
       status: [],
     });
+  }
+
+  addCron() {
+    this.cron.push('* * * * * *');
   }
 
   submit() {
