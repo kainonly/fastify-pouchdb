@@ -21,6 +21,9 @@ const routes: Routes = [
         path: '{script-task-edit}/:id',
         loadChildren: './pages/script-task-edit/script-task-edit.module#ScriptTaskEditModule'
       }, {
+        path: '{script-journal}',
+        loadChildren: './pages/script-journal/script-journal.module#ScriptJournalModule'
+      }, {
         path: '{api-task}',
         loadChildren: './pages/api-task/api-task.module#ApiTaskModule'
       }, {
@@ -29,6 +32,9 @@ const routes: Routes = [
       }, {
         path: '{api-task-edit}/:id',
         loadChildren: './pages/api-task-edit/api-task-edit.module#ApiTaskEditModule'
+      }, {
+        path: '{api-journal}',
+        loadChildren: './pages/api-journal/api-journal.module#ApiJournalModule'
       }, {
         path: '{queue-task}',
         loadChildren: './pages/queue-task/queue-task.module#QueueTaskModule'
@@ -39,11 +45,8 @@ const routes: Routes = [
         path: '{queue-task-edit}/:id',
         loadChildren: './pages/queue-task-edit/queue-task-edit.module#QueueTaskEditModule'
       }, {
-        path: '{journal}',
-        loadChildren: './pages/journal/journal.module#JournalModule'
-      }, {
-        path: '{journal-failed}',
-        loadChildren: './pages/journal-failed/journal-failed.module#JournalFailedModule'
+        path: '{queue-journal}',
+        loadChildren: './pages/queue-journal/queue-journal.module#QueueJournalModule'
       }, {
         path: '{journal-detail}/:id',
         loadChildren: './pages/journal-detail/journal-detail.module#JournalDetailModule'
