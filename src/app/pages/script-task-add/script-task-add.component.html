@@ -32,16 +32,21 @@
         <nz-form-item>
           <nz-form-label nzRequired
                          formLabelCol>
-            定时设置
+            计时器
           </nz-form-label>
           <nz-form-control formControlCol>
-            <input nz-input
-                   formControlName="cron"
-                   placeholder="请输入定时规则"/>
+            <ng-container *ngFor="let x of cron">
+              <input nz-input
+                     placeholder="请输入计时规则"
+                     [(ngModel)]="x"
+                     [ngModelOptions]="{standalone:true}"/>
+            </ng-container>
+            <button nz-button nzType="dashed" (click)="addCron()">
+              <i nz-icon nzType="plus"></i>
+              新增计时器
+            </button>
           </nz-form-control>
         </nz-form-item>
-
-
       </form>
     </nz-card>
   </nz-page-header-content>
