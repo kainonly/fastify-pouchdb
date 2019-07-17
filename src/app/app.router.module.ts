@@ -12,32 +12,32 @@ const routes: Routes = [
         path: '',
         loadChildren: './pages/home/home.module#HomeModule'
       }, {
-        path: '{once-task}',
-        loadChildren: './pages/once-task/once-task.module#OnceTaskModule'
+        path: '{script-task}',
+        loadChildren: './pages/script-task/script-task.module#ScriptTaskModule'
       }, {
-        path: '{once-task-add}',
-        loadChildren: './pages/once-task-add/once-task-add.module#OnceTaskAddModule'
+        path: '{script-task-add}',
+        loadChildren: './pages/script-task-add/script-task-add.module#ScriptTaskAddModule'
       }, {
-        path: '{once-task-edit}/:id',
-        loadChildren: './pages/once-task-edit/once-task-edit.module#OnceTaskEditModule'
+        path: '{script-task-edit}/:id',
+        loadChildren: './pages/script-task-edit/script-task-edit.module#ScriptTaskEditModule'
       }, {
-        path: '{delay-task}',
-        loadChildren: './pages/delay-task/delay-task.module#DelayTaskModule'
+        path: '{api-task}',
+        loadChildren: './pages/api-task/api-task.module#ApiTaskModule'
       }, {
-        path: '{delay-task-add}',
-        loadChildren: './pages/delay-task-add/delay-task-add.module#DelayTaskAddModule'
+        path: '{api-task-add}',
+        loadChildren: './pages/api-task-add/api-task-add.module#ApiTaskAddModule'
       }, {
-        path: '{delay-task-edit}/:id',
-        loadChildren: './pages/delay-task-edit/delay-task-edit.module#DelayTaskEditModule'
+        path: '{api-task-edit}/:id',
+        loadChildren: './pages/api-task-edit/api-task-edit.module#ApiTaskEditModule'
       }, {
-        path: '{timing-task}',
-        loadChildren: './pages/timing-task/timing-task.module#TimingTaskModule'
+        path: '{queue-task}',
+        loadChildren: './pages/queue-task/queue-task.module#QueueTaskModule'
       }, {
-        path: '{timing-task-add}',
-        loadChildren: './pages/timing-task-add/timing-task-add.module#TimingTaskAddModule'
+        path: '{queue-task-add}',
+        loadChildren: './pages/queue-task-add/queue-task-add.module#QueueTaskAddModule'
       }, {
-        path: '{timing-task-edit}/:id',
-        loadChildren: './pages/timing-task-edit/timing-task-edit.module#TimingTaskEditModule'
+        path: '{queue-task-edit}/:id',
+        loadChildren: './pages/queue-task-edit/queue-task-edit.module#QueueTaskEditModule'
       }, {
         path: '{journal}',
         loadChildren: './pages/journal/journal.module#JournalModule'
