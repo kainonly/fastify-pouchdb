@@ -2,11 +2,11 @@ import {Component, OnInit} from '@angular/core';
 import {MainService} from '../../api/main.service';
 
 @Component({
-  selector: 'app-journal',
-  templateUrl: './journal.component.html',
-  styleUrls: ['./journal.component.scss']
+  selector: 'app-api-journal',
+  templateUrl: './api-journal.component.html',
+  styleUrls: ['./api-journal.component.scss']
 })
-export class JournalComponent implements OnInit {
+export class ApiJournalComponent implements OnInit {
   listOfData = [
     {
       key: '1',

@@ -2,9 +2,9 @@ import {Component, OnInit} from '@angular/core';
 import {MainService} from '../../api/main.service';
 
 @Component({
-  selector: 'app-journal',
-  templateUrl: './journal.component.html',
-  styleUrls: ['./journal.component.scss']
+  selector: 'app-queue-journal',
+  templateUrl: './queue-journal.component.html',
+  styleUrls: ['./queue-journal.component.scss']
 })
 export class QueueJournalComponent implements OnInit {
   listOfData = [
