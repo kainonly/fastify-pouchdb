@@ -1,0 +1,47 @@
+<nz-page-header nzTitle="新增任务"
+                nzBackIcon
+                (nzBack)="main.back()">
+  <nz-breadcrumb nz-page-header-breadcrumb>
+    <nz-breadcrumb-item>
+      <a routerLink="/">仪表盘</a>
+    </nz-breadcrumb-item>
+    <nz-breadcrumb-item>
+      <a routerLink="/schedule">计划</a>
+    </nz-breadcrumb-item>
+    <nz-breadcrumb-item>
+      新增任务
+    </nz-breadcrumb-item>
+  </nz-breadcrumb>
+
+  <nz-page-header-content>
+    <nz-card [nzBordered]="false">
+      <form nz-form [formGroup]="form" (ngSubmit)="submit()">
+        <nz-form-item>
+          <nz-form-label nzRequired
+                         formLabelCol>
+            任务名称
+          </nz-form-label>
+          <nz-form-control formControlCol>
+            <input nz-input
+                   formControlName="job_name"
+                   placeholder="请输入任务名称"/>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label nzRequired
+                         formLabelCol>
+            定时设置
+          </nz-form-label>
+          <nz-form-control formControlCol>
+            <input nz-input
+                   formControlName="cron"
+                   placeholder="请输入定时规则"/>
+          </nz-form-control>
+        </nz-form-item>
+
+
+      </form>
+    </nz-card>
+  </nz-page-header-content>
+</nz-page-header>

@@ -24,33 +24,37 @@
         </li>
         <li nz-submenu
             nzIcon="schedule"
-            nzTitle="计划">
+            nzTitle="调度计划">
           <ul>
             <li nz-menu-item
-                [open]="['once-task']">
-              单次任务
+                [open]="['script-task']">
+              脚本任务
             </li>
             <li nz-menu-item
-                [open]="['delay-task']">
-              延时任务
+                [open]="['api-task']">
+              接口任务
             </li>
             <li nz-menu-item
-                [open]="['timing-task']">
-              定时任务
+                [open]="['queue-task']">
+              队列任务
             </li>
           </ul>
         </li>
         <li nz-submenu
             nzIcon="history"
-            nzTitle="调度">
+            nzTitle="历史记录">
           <ul>
             <li nz-menu-item
-                [open]="['journal']">
-              日志记录
+                [open]="['script-journal']">
+              脚本日志
             </li>
             <li nz-menu-item
-                [open]="['journal-failed']">
-              故障记录
+                [open]="['api-journal']">
+              接口日志
+            </li>
+            <li nz-menu-item
+                [open]="['queue-journal']">
+              队列日志
             </li>
           </ul>
         </li>
