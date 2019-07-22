@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {Router} from '@angular/router';
 import {Location} from '@angular/common';
 import {HttpClient} from '@angular/common/http';
+import {ConfigService} from './config.service';
 
 @Injectable()
 export class MainService {
@@ -9,6 +10,7 @@ export class MainService {
     private httpClient: HttpClient,
     private location: Location,
     private router: Router,
+    private configService: ConfigService,
   ) {
   }
 
@@ -30,5 +32,9 @@ export class MainService {
    */
   back() {
     this.location.back();
+  }
+
+  http(url: string, body?: any) {
+    return this.httpClient.post(this.configService.baseUrl + url, body);
   }
 }

@@ -15,6 +15,7 @@ import {TokenService} from './guard/token.service';
 import {MainService} from './api/main.service';
 import {ConfigService} from './api/config.service';
 import {MonacoEditorModule} from 'ngx-monaco-editor';
+import {ScriptTaskService} from './api/script-task.service';
 
 const routes: Routes = [
   {path: '', loadChildren: './app.router.module#AppRouterModule', canActivate: [TokenService]},
@@ -36,6 +37,7 @@ const routes: Routes = [
   providers: [
     TokenService,
     MainService,
+    ScriptTaskService,
     {provide: ConfigService, useValue: environment},
     {provide: NZ_I18N, useValue: en_US}
   ],
