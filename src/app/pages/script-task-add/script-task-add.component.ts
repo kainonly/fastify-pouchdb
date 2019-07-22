@@ -24,10 +24,6 @@ export class ScriptTaskAddComponent implements OnInit {
     });
   }
 
-  addCron() {
-    this.cron.push('* * * * * *');
-  }
-
   submit() {
 
   }

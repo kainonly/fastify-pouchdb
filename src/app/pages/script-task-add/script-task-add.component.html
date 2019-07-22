@@ -32,18 +32,62 @@
         <nz-form-item>
           <nz-form-label nzRequired
                          formLabelCol>
+            任务节点
+          </nz-form-label>
+          <nz-form-control formControlCol>
+            <input nz-input
+                   formControlName="job_name"
+                   placeholder="请选择运行脚本节点"/>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label nzRequired
+                         formLabelCol>
+            用户
+          </nz-form-label>
+          <nz-form-control formControlCol>
+            <input nz-input
+                   formControlName="job_name"
+                   placeholder="请输入任务脚本的执行用户"/>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label nzRequired
+                         formLabelCol>
+            任务脚本
+          </nz-form-label>
+          <nz-form-control formControlCol>
+            <input nz-input
+                   formControlName="job_name"
+                   placeholder="请输入任务脚本的路径"/>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label nzRequired
+                         formLabelCol>
             计时器
           </nz-form-label>
           <nz-form-control formControlCol>
-            <ng-container *ngFor="let x of cron">
-              <input nz-input
-                     placeholder="请输入计时规则"
-                     [(ngModel)]="x"
-                     [ngModelOptions]="{standalone:true}"/>
-            </ng-container>
-            <button nz-button nzType="dashed" (click)="addCron()">
-              <i nz-icon nzType="plus"></i>
-              新增计时器
+            <nz-input-group nzCompact>
+              <input type="text" nz-input style="width: 15%;" placeholder="分钟"/>
+              <input type="text" nz-input style="width:15%;" placeholder="小时"/>
+              <input type="text" nz-input style="width: 15%;" placeholder="天"/>
+              <input type="text" nz-input style="width:15%;" placeholder="月"/>
+              <input type="text" nz-input style="width: 20%;" placeholder="星期"/>
+              <input type="text" nz-input style="width:20%;" placeholder="年"/>
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-divider></nz-divider>
+
+        <nz-form-item>
+          <nz-form-control formControlCol="submit">
+            <button nz-button nzType="primary" [disabled]="!form.valid">
+              提交
             </button>
           </nz-form-control>
         </nz-form-item>

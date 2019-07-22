@@ -14,6 +14,7 @@ import {AppComponent} from './app.component';
 import {TokenService} from './guard/token.service';
 import {MainService} from './api/main.service';
 import {ConfigService} from './api/config.service';
+import {MonacoEditorModule} from 'ngx-monaco-editor';
 
 const routes: Routes = [
   {path: '', loadChildren: './app.router.module#AppRouterModule', canActivate: [TokenService]},
@@ -30,6 +31,7 @@ const routes: Routes = [
     NgZorroAntdModule,
     HttpClientModule,
     RouterModule.forRoot(routes, {useHash: true}),
+    MonacoEditorModule.forRoot()
   ],
   providers: [
     TokenService,
