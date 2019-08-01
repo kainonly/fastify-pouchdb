@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "schedule-manager": {
+    "van-box": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/schedule-manager",
+            "outputPath": "dist/van-box",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -73,18 +73,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "schedule-manager:build"
+            "browserTarget": "van-box:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "schedule-manager:build:production"
+              "browserTarget": "van-box:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "schedule-manager:build"
+            "browserTarget": "van-box:build"
           }
         },
         "test": {
@@ -122,16 +122,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "schedule-manager:serve"
+            "devServerTarget": "van-box:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "schedule-manager:serve:production"
+              "devServerTarget": "van-box:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "schedule-manager"
+  "defaultProject": "van-box"
 }

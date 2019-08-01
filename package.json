@@ -1,5 +1,5 @@
 {
-  "name": "schedule-manager",
+  "name": "van-box",
   "version": "1.0.0",
   "scripts": {
     "start": "ng serve",
