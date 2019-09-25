@@ -1,37 +1,29 @@
 {
-  "name": "van-box",
+  "name": "fastify-pouchdb",
   "version": "1.0.0",
+  "description": "Fastify PouchDB Plugin",
+  "main": "index.js",
   "scripts": {
-    "start": "ng serve",
-    "lint": "ng lint",
-    "serve:open": "ng serve --host 0.0.0.0 --disableHostCheck",
-    "build": "ng build --prod --buildOptimizer"
+    "build": "tsc && cpy package.json dist"
   },
-  "private": true,
   "dependencies": {
-    "@angular/animations": "~8.2.0",
-    "@angular/common": "~8.2.0",
-    "@angular/compiler": "~8.2.0",
-    "@angular/core": "~8.2.0",
-    "@angular/forms": "~8.2.0",
-    "@angular/platform-browser": "~8.2.0",
-    "@angular/platform-browser-dynamic": "~8.2.0",
-    "@angular/router": "~8.2.0",
-    "ng-zorro-antd": "^8.1.2",
-    "ngx-monaco-editor": "^7.0.0",
-    "rxjs": "~6.5.2",
-    "tslib": "^1.9.0",
-    "zone.js": "~0.9.1"
+    "fastify": "^2.8.0",
+    "fastify-plugin": "^1.6.0",
+    "pouchdb": "^7.1.1",
+    "pouchdb-find": "^7.1.1"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.802.0",
-    "@angular/cli": "~8.2.0",
-    "@angular/compiler-cli": "~8.2.0",
-    "@angular/language-service": "~8.2.0",
-    "@types/node": "~8.9.4",
-    "codelyzer": "^5.0.0",
-    "ts-node": "~7.0.0",
-    "tslint": "~5.15.0",
-    "typescript": "~3.5.3"
-  }
+    "@types/node": "^12.7.7",
+    "@types/pouchdb": "^6.4.0",
+    "cpy-cli": "^2.0.0",
+    "prettier": "1.17.0",
+    "ts-loader": "^6.0.1",
+    "ts-node": "^8.2.0",
+    "tsc-watch": "^4.0.0",
+    "tsconfig-paths": "3.8.0",
+    "tslint": "5.16.0",
+    "typescript": "3.4.3"
+  },
+  "author": "kain",
+  "license": "MIT"
 }
