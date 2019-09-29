@@ -11,6 +11,7 @@ Fastify plugin to use PouchDB
 
 ```shell
 npm install fastify-pouchdb --save
+npm install @types/pouchdb --save-dev
 ```
 
 ## Usage
