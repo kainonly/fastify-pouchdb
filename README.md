@@ -28,8 +28,37 @@ server.register(fastifyPouchDB, {
   name: 'myleveldb',
 });
 
-server.get('/', (request, reply) => {
-  console.log(server.pouchdb.allDocs());
+server.get('/', async (request, reply) => {
+  try {
+    const result = await server.pouchdb.allDocs();
+    return {
+      error: 0,
+      data: result,
+    };
+  } catch (e) {
+    return {
+      error: 1,
+      msg: e.message,
+    };
+  }
+});
+
+server.get('/put', async (request, reply) => {
+  try {
+    const result = await server.pouchdb.put({
+      _id: 'mydoc',
+      title: 'Heroes',
+    });
+    return {
+      error: 0,
+      data: result,
+    };
+  } catch (e) {
+    return {
+      error: 1,
+      msg: e.message,
+    };
+  }
 });
 
 server.listen(3000, (err, address) => {
